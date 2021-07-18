@@ -11,3 +11,13 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+require("../stylesheets/application.scss")
+
+// require("@rails/ujs").start()
+// require("turbolinks").start()
+// require("@rails/activestorage").start()
+// require("channels")
+
+import Framework7 from "framework7/framework7-bundle.min.js"
+window.Framework7 = Framework7

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DMap</title>
+    <title>D-Map</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,63 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- App root element -->
+    <div id="app">
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Awesome App</div>
+            </div>
+          </div>
+
+          <!-- Bottom Toolbar -->
+          <div class="toolbar toolbar-bottom">
+            <div class="toolbar-inner">
+              <!-- Toolbar links -->
+              <a href="#" class="link">Link 1</a>
+              <a href="#" class="link">Link 2</a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <p>Page content goes here</p>
+            <%= yield %>
+            <!-- Link to another page -->
+            <a href="/about/">About app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var app = new Framework7({
+        // App root element
+        el: '#app',
+        // App Name
+        name: 'My App',
+        // App id
+        id: 'com.myapp.test',
+        // Enable swipe panel
+        panel: {
+          swipe: true,
+        },
+        // Add default routes
+        routes: [
+          {
+            path: '/about/',
+            url: 'about.html',
+          },
+        ],
+        // ... other parameters
+      });
+    </script>
   </body>
 </html>
