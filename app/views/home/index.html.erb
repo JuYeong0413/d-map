@@ -1,239 +1,77 @@
-
-  <div class="page">
-    <div class="navbar">
-      <div class="navbar-bg"></div>
-      <div class="navbar-inner">
-        <div class="title">Search Bar</div>
-        <div class="subnavbar">
-          <form class="searchbar">
-            <div class="searchbar-inner">
-              <div class="searchbar-input-wrap">
-                <input type="search" placeholder="Search" />
-                <i class="searchbar-icon"></i>
-                <span class="input-clear-button"></span>
-              </div>
-              <span class="searchbar-disable-button if-not-aurora">Cancel</span>
-            </div>
-          </form>
+<div class="page">
+  <div class="page-content">
+    <div class="searchbar-backdrop"></div>
+    <!-- Searchbar with "searchbar-init" class for auto initialization and searchContainer, searchIn parameters passed in data- attributes  -->
+    <form class="searchbar searchbar-init" data-search-container=".list" data-search-item="li" data-search-in=".item-title">
+      <div class="searchbar-inner">
+        <div class="searchbar-input-wrap">
+          <input type="search" placeholder="Search" />
+          <i class="searchbar-icon"></i>
+          <span class="input-clear-button"></span>
         </div>
+        <span class="searchbar-disable-button if-not-aurora">Cancel</span>
       </div>
+    </form>
+
+    <!-- Following block title and block will be hidden on search -->
+    <div class="block-title searchbar-hide-on-search">Some block title</div>
+    <div class="block">Lorem ipsum dolor sit amet...</div>
+
+    <!-- We do search in super heroes list so the following title and list must be visible on search -->
+    <div class="block-title searchbar-found">Super Heroes</div>
+    <div class="list simple-list searchbar-found">
+      <ul>
+        <li class="item-title"><a class="popup-open" href="#" data-popup=".popup-push">Acura</a></li>
+        <li>Audi</li>
+        <li>BMW</li>
+        <li>Cadillac</li>
+        <li>Chevrolet</li>
+        <li>Chrysler</li>
+        <li>Dodge</li>
+        <li>Ferrari</li>
+        <li>Ford</li>
+        <li>GMC</li>
+        <li>Honda</li>
+        <li>Hummer</li>
+        <li>Hyundai</li>
+        <li>Infiniti</li>
+        <li>Isuzu</li>
+        <li>Jaguar</li>
+        <li>Jeep</li>
+        <li>Kia</li>
+        <li>Lamborghini</li>
+        <li>Land Rover</li>
+        <li>Lexus</li>
+        <li>Lincoln</li>
+        <li>Lotus</li>
+        <li>Mazda</li>
+        <li>Mercedes-Benz</li>
+        <li>Mercury</li>
+        <li>Mitsubishi</li>
+        <li>Nissan</li>
+        <li>Oldsmobile</li>
+        <li>Peugeot</li>
+        <li>Pontiac</li>
+        <li>Porche</li>
+        <li>Regal</li>
+        <li>Saab</li>
+        <li>Saturn</li>
+        <li>Subaru</li>
+        <li>Suzuki</li>
+        <li>Toyota</li>
+        <li>Volkswagen</li>
+        <li>Volvo</li>
+      </ul>
     </div>
-    <div class="page-content">
-      <div class="searchbar-backdrop"></div>
-      <div class="block searchbar-hide-on-search">
-        <p>This block will be hidden on search. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-      <div class="list searchbar-found">
-        <ul>
-          <li class="item-content">
-            <div class="item-inner">
-              <a class="popup-open" href="#" data-popup=".popup-push">
-                <div class="item-title">Acura</div>
-              </a>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Audi</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">BMW</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Cadillac</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Chevrolet</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Chrysler</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Dodge</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Ferrari</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Ford</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">GMC</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Honda</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Hummer</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Hyundai</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Infiniti</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Isuzu</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Jaguar</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Jeep</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Kia</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Lamborghini</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Land Rover</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Lexus</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Lincoln</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Lotus</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Mazda</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Mercedes-Benz</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Mercury</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Mitsubishi</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Nissan</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Oldsmobile</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Peugeot</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Pontiac</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Porsche</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Regal</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Saab</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Saturn</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Subaru</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Suzuki</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Toyota</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Volkswagen</div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-inner">
-              <div class="item-title">Volvo</div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="block searchbar-not-found">
-        <div class="block-inner">Nothing found</div>
-      </div>
+
+    <!-- This list will be visible when there is not any search results -->
+    <div class="list simple-list searchbar-not-found">
+      <ul>
+        <li>Nothing found</li>
+      </ul>
     </div>
   </div>
+</div>
 
   <div class="popup popup-push">
     <div class="block">
