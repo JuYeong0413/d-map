@@ -20,46 +20,12 @@
         <div data-name="home" class="page">
 
           <!-- Top Navbar -->
-          <div class="navbar">
-            <div class="navbar-bg"></div>
-            <div class="navbar-inner sliding">
-              <div class="left"></div>
-              <div class="title">D-Map</div>
-              <div class="right"></div>
-            </div>
-          </div>
+          <%= render 'shared/navbar' %>
 
           <!-- Scrollable page content -->
-          <div class="page-content">
-            <div class="page">
-              <div class="toolbar tabbar-labels toolbar-bottom">
-                <div class="toolbar-inner">
-                  <a href="#list-tab" class="tab-link">
-                    <i class="icon f7-icons if-not-md">menu</i>
-                    <i class="icon material-icons md-only">list</i>
-                    <span class="tabbar-label">List</span>
-                  </a>
-                  <a href="#map-tab" class="tab-link tab-link-active">
-                    <i class="icon f7-icons if-not-md">placemark_fill</i>
-                    <i class="icon material-icons md-only">place</i>
-                    <span class="tabbar-label">Map</span>
-                  </a>
-                  <a href="#info-tab" class="tab-link">
-                    <i class="icon f7-icons if-not-md">info_circle_fill</i>
-                    <i class="icon material-icons md-only">info</i>
-                    <span class="tabbar-label">Info</span>
-                  </a>
-                </div>
-              </div>
-              <div class="tabs">
-                <div class="page-content tab" id="list-tab" data-url="<%= root_path %>"></div>
-                <div class="page-content tab tab-active" id="map-tab" data-url="<%= maps_path %>"></div>
-                <div class="page-content tab" id="info-tab" data-url="<%= root_path %>"></div>
-              </div>
-            </div>
+          <%= render 'shared/tabbar' %>
 
-            <%= yield %>
-          </div>
+          <%= yield %>
         </div>
       </div>
     </div>
@@ -71,7 +37,7 @@
         // App Name
         name: 'D-Map',
         // App id
-        id: 'com.myapp.test',
+        id: 'site.d-map',
         // Enable swipe panel
         panel: {
           swipe: true,
@@ -81,26 +47,6 @@
         // ... other parameters
       });
     </script>
-    <style>
-      .rotate-icon {
-        transform: rotate(90deg);
-      }
-    </style>
-    <script type="module">
-      export default (props, { $, $on }) => {
-        let $toolbarEl;
 
-        const togglePosition = () => {
-          $toolbarEl.toggleClass('toolbar-bottom toolbar-top');
-        }
-
-        $on('pageInit', (e, page) => {
-          $toolbarEl = page.$el.find('.toolbar');
-        });
-
-        return $render;
-      }
-
-    </script>
   </body>
 </html>
