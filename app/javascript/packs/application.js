@@ -19,5 +19,5 @@ require("../stylesheets/application.scss")
 // require("@rails/activestorage").start()
 // require("channels")
 
-import Framework7 from "framework7/framework7-bundle.min.js"
+import Framework7 from "framework7/framework7-bundle.js"
 window.Framework7 = Framework7

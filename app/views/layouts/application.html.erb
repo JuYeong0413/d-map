@@ -30,6 +30,8 @@
       </div>
     </div>
 
+    <%= javascript_pack_tag 'searchbar' %>
+
     <script type="text/javascript">
       var app = new Framework7({
         // App root element
@@ -45,6 +47,11 @@
         // Add default routes
         routes: <%= rails_info_routes_url.to_json.html_safe %>,
         // ... other parameters
+        on: {
+          init: function () {
+            console.log('App initialized.');
+          },
+        }
       });
     </script>
 
