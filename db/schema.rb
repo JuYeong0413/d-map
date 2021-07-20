@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 2021_07_20_072324) do
     t.string "location"
     t.decimal "lat"
     t.decimal "lng"
-    t.string "instagram_id"
+    t.string "instagram"
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

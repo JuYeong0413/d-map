@@ -5,7 +5,7 @@ class CreateElements < ActiveRecord::Migration[6.1]
       t.string :location
       t.decimal :lat
       t.decimal :lng
-      t.string :instagram_id
+      t.string :instagram
       t.string :link
 
       t.timestamps

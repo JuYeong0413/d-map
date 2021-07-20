@@ -6,7 +6,7 @@ def seed_elements
     location: '서울 중구 퇴계로42길 35',
     lat: 37.56017737824634,
     lng: 126.99648790994583,
-    instagram_id: 'evins_coffee_story',
+    instagram: 'evins_coffee_story',
     link: 'http://naver.me/xVm3wJtI'
   )
 
@@ -71,7 +71,7 @@ def seed_elements
     location: '서울 중구 퇴계로 188 지하 1층(충무로역 4번 출구 앞 파리바게트 건물)',
     lat: 37.56098348566187,
     lng: 126.9925624559339,
-    instagram_id: 'theomgm',
+    instagram: 'theomgm',
     link: 'http://naver.me/FuipCZ06'
   )
 
