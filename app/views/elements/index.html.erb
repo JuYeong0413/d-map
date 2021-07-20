@@ -53,62 +53,78 @@
         <div class="navbar-bg"></div>
         <div class="navbar-inner">
           <div class="title"><%= elem.name %></div>
-          <div class="right"><a href="#" class="link popup-close">닫기</a></div>
+          <div class="right">
+            <a href="#" class="link popup-close">
+              <i class="icon f7-icons if-not-md">multiply</i>
+              <i class="icon material-icons md-only">close</i>
+            </a>
+          </div>
         </div>
       </div>
       <div class="page-content">
-        <div class="block">
-          <% @benefits = elem.benefits %>
-          <% @benefits.each do |benefit| %>
-            <span>
-              <i class="icon f7-icons if-not-md">hand_point_right</i>
-              <i class="icon material-icons md-only">info</i>
-              <%= benefit.title %><br>
+        <% if !elem.location.nil? %>
+          <div class="block">
+            <div class="element-title">
+              <i class="icon f7-icons if-not-md size-20">info_circle</i>
+              <i class="icon material-icons-outlined md-only">info</i>
+              기본정보
+            </div>
+            <span class="element-detail">
+              -&nbsp;주소:&nbsp;<%= elem.location %><br>
+              <% if !elem.instagram.nil? %>
+                -&nbsp;인스타그램: <a href="https://instagram.com/<%= elem.instagram %>">@<%= elem.instagram %></a><br>
+              <% end %>
+              -&nbsp;<a href="<%= elem.link %>">상세정보 네이버 지도에서 보기</a>
+            </span>
+          </div>
+        <% end %>
 
+        <div class="block">
+          <div class="element-title">
+            <i class="icon f7-icons if-not-md size-20">lightbulb</i>
+            <i class="icon material-icons-outlined md-only">lightbulb</i>
+            혜택
+          </div>
+          <span class="element-detail">
+            <% @benefits = elem.benefits %>
+            <% @benefits.each do |benefit| %>
+              -&nbsp;<%= benefit.title %><br>
               <% if !benefit.detail.nil? %>
-                <span>
-                  <%= benefit.detail %><br>
-                <span>
+                <%= benefit.detail %><br>
+              <% end %>
+            <% end %>
+          </span>
+        </div>
+
+        <% @notes = elem.notes %>
+        <% if !@notes.empty? %>
+          <div class="block">
+            <div class="element-title">
+              <i class="icon f7-icons if-not-md size-20">exclamationmark_bubble</i>
+              <i class="icon material-icons-outlined md-only">feedback</i>
+              참고사항
+            </div>
+            <span class="element-detail">
+              <% @notes.each do |note| %>
+                -&nbsp;<%= note.content %><br>
               <% end %>
             </span>
-          <% end %>
-        </div>
+          </div>
+        <% end %>
+
         <div class="block">
-          <% @notes = elem.notes %>
-          <% if !@notes.nil? %>
-            <% @notes.each do |note| %>
-              <span>
-                <i class="icon f7-icons if-not-md">exclamationmark_bubble</i>
-                <i class="icon material-icons md-only">info</i>
-                <%= note.content %><br>
-              </span>
-            <% end %>
-          <% end %>
+          <div class="element-title">
+            <i class="icon f7-icons if-not-md size-20">pencil</i>
+            <i class="icon material-icons md-only">edit</i>
+            잘못된 정보가 있나요?
+          </div>
+          <span class="element-detail">
+            잘못된 정보나 누락된 내용이 있다면 개발자에게 알려주세요!&nbsp;
+            (<a href="mailto:juyeonglee0413@gmail.com?">이메일 보내기</a>)
+          </span>
         </div>
+
       </div>
     </div>
   </div>
 <% end %>
-
-<script type="module">
-  export default (props, { $f7, $on }) => {
-    $on('pageInit', () => {
-      // create searchbar
-      var searchbar = $f7.searchbar.create({
-        el: '.searchbar',
-        searchContainer: '.list',
-        searchIn: '.item-title',
-        on: {
-          search(sb, query, previousQuery) {
-            console.log(query, previousQuery);
-          },
-          enable: function () {
-            console.log('Searchbar enabled');
-          }
-        }
-      });
-    })
-
-    return $render;
-  }
-</script>
