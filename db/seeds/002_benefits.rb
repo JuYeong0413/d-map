@@ -143,7 +143,7 @@ def seed_benefits
 
   Benefit.find_or_create_by!(
     element_id: 15,
-    title: '7,000원'
+    title: '영화 관람 7,000원'
   )
 
   Benefit.find_or_create_by!(

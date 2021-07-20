@@ -5,12 +5,12 @@ ActiveAdmin.register Element do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :location, :lat, :lng, :instagram_id, :link
+  permit_params :name, :location, :lat, :lng, :instagram, :link
   #
   # or
   #
   # permit_params do
-  #   permitted = [:name, :location, :lat, :lng, :instagram_id, :link]
+  #   permitted = [:name, :location, :lat, :lng, :instagram, :link]
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
