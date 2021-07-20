@@ -72,9 +72,9 @@
             <span class="element-detail">
               -&nbsp;주소:&nbsp;<%= elem.location %><br>
               <% if !elem.instagram.nil? %>
-                -&nbsp;인스타그램: <a href="https://instagram.com/<%= elem.instagram %>">@<%= elem.instagram %></a><br>
+                -&nbsp;인스타그램: <a class="link external" href="https://instagram.com/<%= elem.instagram %>" target="_blank">@<%= elem.instagram %></a><br>
               <% end %>
-              -&nbsp;<a href="<%= elem.link %>">상세정보 네이버 지도에서 보기</a>
+              -&nbsp;<a class="link external" href="<%= elem.link %>" target="_blank">네이버 플레이스 상세정보 보기</a>
             </span>
           </div>
         <% end %>
@@ -120,7 +120,7 @@
           </div>
           <span class="element-detail">
             잘못된 정보나 누락된 내용이 있다면 개발자에게 알려주세요!&nbsp;
-            (<a href="mailto:juyeonglee0413@gmail.com?">이메일 보내기</a>)
+            (<a class="link external" href="mailto:juyeonglee0413@gmail.com?subject=D-Map 정보 추가/수정 요청" target="_blank">이메일 보내기</a>)
           </span>
         </div>
 
