@@ -45,3 +45,7 @@
    font-feature-settings: "liga";
    text-align: center;
  }
+
+ a {
+   text-decoration: none !important
+ }
