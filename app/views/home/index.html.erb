@@ -26,36 +26,49 @@
     </div>
     <div class="list searchbar-found">
       <ul>
-        <li class="item-content">
-          <div class="item-inner">
-            <div class="item-title"><a class="popup-open" href="#" data-popup=".popup-push">Acura</a></div>
-          </div>
-        </li>
-        <li class="item-content">
-          <div class="item-inner">
-            <div class="item-title">Audi</div>
-          </div>
-        </li>
-        <li class="item-content">
-          <div class="item-inner">
-            <div class="item-title">BMW</div>
-          </div>
-        </li>
-        <li class="item-content">
-          <div class="item-inner">
-            <div class="item-title">Cadillac</div>
-          </div>
-        </li>
-        <li class="item-content">
-          <div class="item-inner">
-            <div class="item-title">Chevrolet</div>
-          </div>
-        </li>
-        <li class="item-content">
-          <div class="item-inner">
-            <div class="item-title">Chrysler</div>
-          </div>
-        </li>
+
+        <div class="list-group">
+            <li class="list-group-title">A</li>
+            <li class="item-link item-content popup-open" data-popup=".demo-popup">
+              <div class="item-inner">
+                <div class="item-title"><a class="popup-open" href="#" data-popup=".popup-push">Acura</a></div>
+              </div>
+            </li>
+            <li class="item-link item-content popup-open" data-popup=".demo-popup-2">
+              <div class="item-inner">
+                <div class="item-title">Audi</div>
+              </div>
+            </li>
+        </div>
+
+        <div class="list-group">
+          <li class="list-group-title">B</li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title">BMW</div>
+            </div>
+          </li>
+        </div>
+
+        <div class="list-group">
+          <li class="list-group-title">C</li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title">Cadillac</div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title">Chevrolet</div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-inner">
+              <div class="item-title">Chrysler</div>
+            </div>
+          </li>
+        </div>
+
         <li class="item-content">
           <div class="item-inner">
             <div class="item-title">Dodge</div>
@@ -238,19 +251,55 @@
   <div class="searchbar-backdrop"></div>
 </div>
 
-  <div class="popup popup-push">
-    <div class="block">
-      <p>Popup Push</p>
-      <p><a class="link popup-close" href="#">Close popup</a></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc.
-        Quisque sodales scelerisque est, at porta justo cursus ac. Integer vitae quam a ante lobortis lobortis. Nam
-        vehicula sagittis quam, sit amet congue purus consequat sed. Maecenas eget mattis lectus. Aliquam luctus
-        luctus leo ac fringilla. Sed nec eros vel purus tincidunt tincidunt in in orci. Sed tellus neque,
-        pellentesque
-        nec metus id, congue elementum odio. Donec turpis tellus, mollis ac leo eget, accumsan fermentum lorem.
-        Aliquam et elementum neque. Vestibulum sed egestas ipsum.</p>
+<div class="popup popup-push"s>
+  <div class="block">
+    <p>Popup Push</p>
+    <p><a class="link popup-close" href="#">Close popup</a></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac diam ac quam euismod porta vel a nunc.
+      Quisque sodales scelerisque est, at porta justo cursus ac. Integer vitae quam a ante lobortis lobortis. Nam
+      vehicula sagittis quam, sit amet congue purus consequat sed. Maecenas eget mattis lectus. Aliquam luctus
+      luctus leo ac fringilla. Sed nec eros vel purus tincidunt tincidunt in in orci. Sed tellus neque,
+      pellentesque
+      nec metus id, congue elementum odio. Donec turpis tellus, mollis ac leo eget, accumsan fermentum lorem.
+      Aliquam et elementum neque. Vestibulum sed egestas ipsum.</p>
+  </div>
+</div>
+
+<div class="popup demo-popup">
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="title">Popup Title</div>
+        <div class="right"><a href="#" class="link popup-close">Close</a></div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <p>Here comes popup. You can put here anything, even independent view with its own navigation. Also not,
+          that by default popup looks a bit different on iPhone/iPod and iPad, on iPhone it is fullscreen.</p>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="popup demo-popup-2">
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="title">Popup Title 2</div>
+        <div class="right"><a href="#" class="link popup-close">Close 2</a></div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <p>Here comes popup. You can put here anything, even independent view with its own navigation. Also not,
+          that by default popup looks a bit different on iPhone/iPod and iPad, on iPhone it is fullscreen.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script type="module">
   export default (props, { $f7, $on }) => {
