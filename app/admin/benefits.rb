@@ -5,7 +5,7 @@ ActiveAdmin.register Benefit do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :element_id, :title, :detail
+  permit_params :element_id, :title, :detail
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register Benefit do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end

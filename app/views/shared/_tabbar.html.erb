@@ -21,7 +21,7 @@
     </div>
     <div class="tabs page-content">
       <div class="tab" id="list-tab">
-        <%= render template: 'home/index' %>
+        <%= render template: 'elements/index', collection: @elements = Element.all.sort_by { |element| element.name } %>
       </div>
       <div class="tab tab-active" id="map-tab">
         <%= render template: 'maps/index' %>

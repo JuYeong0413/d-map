@@ -5,7 +5,7 @@ ActiveAdmin.register Note do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  # permit_params :element_id, :content
+  permit_params :element_id, :content
   #
   # or
   #
@@ -14,5 +14,5 @@ ActiveAdmin.register Note do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
 end
