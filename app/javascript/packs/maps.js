@@ -24,7 +24,9 @@ window.addEventListener('DOMContentLoaded', function(){
 });
 
 function resize(){
-  var toolbarHeight = document.querySelector('.toolbar').offsetHeight
-  var Size = new naver.maps.Size(window.innerWidth, window.innerHeight - toolbarHeight);
+  var navbarHeight = document.querySelector('.navbar').offsetHeight;
+  var toolbarHeight = document.querySelector('.toolbar').offsetHeight;
+  var mapHeight = window.innerHeight - navbarHeight - toolbarHeight;
+  var Size = new naver.maps.Size(window.innerWidth, mapHeight);
   map.setSize(Size);
 }
