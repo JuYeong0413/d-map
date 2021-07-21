@@ -21,8 +21,11 @@ class ElementsController < ApplicationController
     end
 
     render json: {
+      id: @element.id,
       name: @element.name,
       location: @element.location,
+      lat: @element.lat,
+      lng: @element.lng,
       instagram: @element.instagram,
       link: @element.link,
       benefits: @benefits,

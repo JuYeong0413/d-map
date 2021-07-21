@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Events
     on: {
       open: function (popup) {
-        console.log('Popup open');
+        // console.log('Popup open');
         $.ajax({
           url: `/elements/${elementId}`,
           type: "GET",
@@ -32,27 +32,24 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                 </div>
                 <div class="page-content">
-                  <div class="block justify-content-center element-map">
-                    <span>지도 들어갈 자리</span>
-                  </div>
-
                   ${response.location == null ?
                     ''
-                  : `<div class="block">
-                      <div class="element-title">
-                        <i class="icon f7-icons if-not-md size-20">info_circle</i>
-                        <i class="icon material-icons-outlined md-only">info</i>
-                        기본정보
-                      </div>
-                      <span class="element-detail">
-                        -&nbsp;주소:&nbsp;${response.location}<br>
-                        ${response.instagram == null ?
-                          ''
-                        : `-&nbsp;인스타그램: <a class="link external" href="https://instagram.com/${response.instagram}" target="_blank">@${response.instagram}</a><br>`
-                        }
-                        -&nbsp;<a class="link external" href="${response.link}" target="_blank">네이버 플레이스 상세정보 보기</a>
-                      </span>
-                    </div>`
+                  : `<div id="element-map" class="element-map"></div>
+                     <div class="block">
+                       <div class="element-title">
+                         <i class="icon f7-icons if-not-md size-20">info_circle</i>
+                         <i class="icon material-icons-outlined md-only">info</i>
+                         기본정보
+                       </div>
+                       <span class="element-detail">
+                         -&nbsp;주소:&nbsp;${response.location}<br>
+                         ${response.instagram == null ?
+                           ''
+                         : `-&nbsp;인스타그램: <a class="link external" href="https://instagram.com/${response.instagram}" target="_blank">@${response.instagram}</a><br>`
+                         }
+                         -&nbsp;<a class="link external" href="${response.link}" target="_blank">네이버 플레이스 상세정보 보기</a>
+                       </span>
+                     </div>`
                   }
 
                   <div class="block">
@@ -104,6 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 </div>
               </div>
+
+              <script>
+                var elementExists = document.getElementById("element-map");
+
+                if (elementExists) {
+                  var elementMap = new naver.maps.Map('element-map', {
+                    center: new naver.maps.LatLng(${response.lat}, ${response.lng}), // 지도의 초기 중심 좌표
+                    zoom: 17, // 지도의 초기 줌 레벨
+                    minZoom: 14 // 지도의 최소 줌 레벨
+                  });
+
+                  var elementMarker = new naver.maps.Marker({
+                      position: new naver.maps.LatLng(${response.lat}, ${response.lng}),
+                      map: elementMap
+                  });
+                }
+              </script>
             `
 
             $('#element-popup').append(_content);
@@ -123,17 +137,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       },
       opened: function (popup) {
-        console.log('Popup opened');
+        // console.log('Popup opened');
       }
     }
   });
 
   // Events also can be assigned on instance later
   dynamicPopup.on('close', function (popup) {
-    console.log('Popup close');
+    // console.log('Popup close');
+    $('#element-map').remove();
   });
   dynamicPopup.on('closed', function (popup) {
-    console.log('Popup closed');
+    // console.log('Popup closed');
   });
 
   // Open dynamic popup
@@ -142,4 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
     dynamicPopup.open();
   });
 
-})
+});
