@@ -86,7 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>`
                   }
 
-
                   <div class="block">
                     <div class="element-title">
                       <i class="icon f7-icons if-not-md size-20">pencil</i>
@@ -109,7 +108,12 @@ document.addEventListener('DOMContentLoaded', () => {
                   var elementMap = new naver.maps.Map('element-map', {
                     center: new naver.maps.LatLng(${response.lat}, ${response.lng}), // 지도의 초기 중심 좌표
                     zoom: 17, // 지도의 초기 줌 레벨
-                    minZoom: 14 // 지도의 최소 줌 레벨
+                    minZoom: 14, // 지도의 최소 줌 레벨
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        style: naver.maps.ZoomControlStyle.SMALL,
+                        position: naver.maps.Position.TOP_RIGHT
+                    }
                   });
 
                   var elementMarker = new naver.maps.Marker({

@@ -33,6 +33,13 @@ class ElementsController < ApplicationController
     }
   end
 
+  def markers
+    @elements = Element.where.not(location: nil)
+    @coordinates = @elements.pluck(:id, :lat, :lng)
+
+    render json: { coordinates: @coordinates }
+  end
+
   private
 
   def load_element
