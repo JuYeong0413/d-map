@@ -31,8 +31,7 @@ def seed_benefits
   )
   Benefit.find_or_create_by!(
     element_id: 4,
-    title: '꿔바로우 천원 할인',
-    detail: '(12,000원 → 11,000원)'
+    title: '꿔바로우 천원 할인 (12,000원 → 11,000원)'
   )
 
   Benefit.find_or_create_by!(
@@ -46,8 +45,7 @@ def seed_benefits
 
   Benefit.find_or_create_by!(
     element_id: 6,
-    title: '동국대생 3명 이상 방문 시 테이블 당 음료 1캔 or 감자튀김 제공',
-    detail: '(두가지 중 택 1)'
+    title: '동국대생 3명 이상 방문 시 테이블 당 음료 1캔 or 감자튀김 제공 (두가지 중 택 1)'
   )
 
   Benefit.find_or_create_by!(
