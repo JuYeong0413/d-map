@@ -11,6 +11,16 @@
     <meta property="og:image" content="<%= asset_path 'd-map.png' %>">
     <meta property="og:description" content="동국, 그대를 위한 디멤버십">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-136P45HK57"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-136P45HK57');
+    </script>
+
     <title>D-Map</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
