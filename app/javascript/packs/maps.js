@@ -34,6 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementsByClassName('naver-map')[1].remove();
   // console.log('blank removed.');
 
+  // Create toast
+  var toastWithButton = app.toast.create({
+    text: '마커를 클릭하면 상세정보 확인이 가능합니다.<br>지도를 확대해서 마커를 클릭해 보세요.',
+    closeButton: true,
+    position: 'top',
+    closeTimeout: 5000,
+  });
+  // Open it
+  toastWithButton.open();
+
+
   var element_ids = []
   var markers = []
 
