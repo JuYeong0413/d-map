@@ -1,6 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-  var elementId;
+import { showErrorToast } from "./toast.js";
 
+
+export function createDynamicPopup(elementId) {
   // Create dynamic Popup
   var dynamicPopup = app.popup.create({
     content: `
@@ -127,16 +128,26 @@ document.addEventListener('DOMContentLoaded', () => {
             $('#element-popup').append(_content);
           },
           error: function(response) {
-            // Create toast
-            var toastIcon = app.toast.create({
-              icon: '<i class="icon f7-icons if-not-md">exclamationmark_circle_fill</i><i class="icon material-icons md-only">error</i>',
-              text: '<p>오류가 발생했습니다.<br>개발자에게 문의해주세요.</p>',
-              position: 'center',
-              closeTimeout: 3000,
-            });
+            var _navbar = `
+              <div class="page">
+                <div class="navbar">
+                  <div class="navbar-bg"></div>
+                  <div class="navbar-inner">
+                    <div class="left"></div>
+                    <div class="title"></div>
+                    <div class="right">
+                      <a href="#" class="link popup-close">
+                        <i class="icon f7-icons if-not-md">multiply</i>
+                        <i class="icon material-icons md-only">close</i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `
+            $('#element-popup').append(_navbar);
 
-            // Open it
-            toastIcon.open();
+            showErrorToast();
           }
         });
       },
@@ -151,14 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log('Popup close');
     $('#element-map').remove();
   });
-  dynamicPopup.on('closed', function (popup) {
-    // console.log('Popup closed');
-  });
 
-  // Open dynamic popup
-  $('.dynamic-popup').on('click', function () {
-    elementId = this.id;
-    dynamicPopup.open();
-  });
-
-});
+  return dynamicPopup;
+}
