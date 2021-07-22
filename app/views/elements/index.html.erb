@@ -1,0 +1,46 @@
+<div class="page page-with-subnavbar">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="subnavbar">
+        <!-- Searchbar inside of Subnavbar -->
+        <form class="searchbar searchbar-init" data-search-container=".list" data-search-in=".item-title" style="width: 100%;">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="검색어를 입력하세요..." />
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button if-not-aurora">취소</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+    <div class="block searchbar-hide-on-search">
+      <p>
+        제휴 업체 또는 매장 이름으로 검색 가능합니다.
+        선택 시 해당 업체에 대한 혜택 상세 팝업이 표시됩니다.
+      </p>
+    </div>
+    <div class="list searchbar-found">
+      <ul>
+        <% @elements.each do |elem| %>
+          <li class="item-link item-content dynamic-popup" id="<%= elem.id %>">
+            <div class="item-inner">
+              <div class="item-title"><%= elem.name %></div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="block searchbar-not-found">
+      <div class="block-inner">검색 결과가 없습니다.</div>
+    </div>
+  </div>
+
+  <!-- Searchbar backdrop layer -->
+  <div class="searchbar-backdrop"></div>
+</div>

@@ -1,16 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DMap</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <meta property="og:url" content="https://d-map.site/">
+    <meta property="og:title" content="D-Map">
+    <meta property="og:type" content=”website”/>
+    <meta property="og:image" content="<%= asset_path 'd-map.png' %>">
+    <meta property="og:description" content="동국, 그대를 위한 디멤버십">
+
+    <title>D-Map</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<%= asset_path 'dongguk-logo.png' %>"/>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <!-- App root element -->
+    <div id="app">
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main safe-areas">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page page-content">
+
+          <% if Date.today.between?(DateTime.new(2021, 7, 24, 00, 00, 00), DateTime.new(2021, 7, 26, 00, 00, 00)) %>
+            <%= render 'shared/notice' %>
+          <% else %>
+            <!-- Top Navbar -->
+            <%= render 'shared/navbar' %>
+
+            <!-- Scrollable page content -->
+            <%= render 'shared/tabbar' %>
+          <% end %>
+
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+
+    <%= javascript_pack_tag 'toast' %>
+    <%= javascript_pack_tag 'maps' %>
+    <%= javascript_pack_tag 'elements' %>
+    <%= javascript_pack_tag 'searchbar' %>
+    <%= javascript_pack_tag 'popup' %>
+
+    <script type="text/javascript">
+      // Dom7
+      var $ = Dom7;
+
+      var app = new Framework7({
+        // App root element
+        el: '#app',
+        // App Name
+        name: 'D-Map',
+        // App id
+        id: 'site.d-map',
+        // Enable swipe panel
+        panel: {
+          swipe: true,
+        },
+        // Add default routes
+        routes: <%= rails_info_routes_url.to_json.html_safe %>,
+        // ... other parameters
+        on: {
+          init: function () {
+            console.log('App initialized.');
+          },
+        }
+      });
+    </script>
+
   </body>
 </html>

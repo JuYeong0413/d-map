@@ -1,0 +1,56 @@
+<div class="page-content">
+  <div class="page">
+    <div class="toolbar tabbar-labels toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="#list-tab" class="tab-link">
+          <i class="icon f7-icons if-not-md">menu</i>
+          <i class="icon material-icons md-only">list</i>
+          <span class="tabbar-label">List</span>
+        </a>
+        <a href="#map-tab" class="tab-link tab-link-active">
+          <i class="icon f7-icons if-not-md">placemark_fill</i>
+          <i class="icon material-icons md-only">place</i>
+          <span class="tabbar-label">Map</span>
+        </a>
+        <a href="#info-tab" class="tab-link">
+          <i class="icon f7-icons if-not-md">info_circle_fill</i>
+          <i class="icon material-icons md-only">info</i>
+          <span class="tabbar-label">Info</span>
+        </a>
+      </div>
+    </div>
+    <div class="tabs page-content">
+      <div class="tab" id="list-tab">
+        <%= render template: 'elements/index', collection: @elements = Element.all.sort_by { |element| element.name } %>
+      </div>
+      <div class="tab tab-active" id="map-tab">
+        <%= render template: 'maps/index' %>
+      </div>
+      <div class="tab" id="info-tab">
+        <%= render 'shared/info' %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .rotate-icon {
+    transform: rotate(90deg);
+  }
+</style>
+<script type="module">
+  export default (props, { $, $on }) => {
+    let $toolbarEl;
+
+    const togglePosition = () => {
+      $toolbarEl.toggleClass('toolbar-bottom toolbar-top');
+    }
+
+    $on('pageInit', (e, page) => {
+      $toolbarEl = page.$el.find('.toolbar');
+    });
+
+    return $render;
+  }
+
+</script>
