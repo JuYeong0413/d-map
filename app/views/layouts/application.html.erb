@@ -42,15 +42,11 @@
         <!-- Initial Page, "data-name" contains page name -->
         <div data-name="home" class="page page-content">
 
-          <% if !Date.today.between?(DateTime.new(2021, 7, 24, 00, 00, 00), DateTime.new(2021, 7, 26, 00, 00, 00)) %>
-            <%= render 'shared/notice' %>
-          <% else %>
-            <!-- Top Navbar -->
-            <%= render 'shared/navbar' %>
+          <!-- Top Navbar -->
+          <%= render 'shared/navbar' %>
 
-            <!-- Scrollable page content -->
-            <%= render 'shared/tabbar' %>
-          <% end %>
+          <!-- Scrollable page content -->
+          <%= render 'shared/tabbar' %>
 
           <%= yield %>
         </div>
