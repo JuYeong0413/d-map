@@ -26,8 +26,7 @@ export function createDynamicPopup(elementId) {
                     <div class="title">${response.name}</div>
                     <div class="right">
                       <a href="#" class="link popup-close">
-                        <i class="icon f7-icons if-not-md">multiply</i>
-                        <i class="icon material-icons md-only">close</i>
+                        <i class="icon f7-icons">multiply</i>
                       </a>
                     </div>
                   </div>
@@ -38,8 +37,7 @@ export function createDynamicPopup(elementId) {
                   : `<div id="element-map" class="element-map"></div>
                      <div class="block">
                        <div class="element-title">
-                         <i class="icon f7-icons if-not-md size-20">info_circle</i>
-                         <i class="icon material-icons-outlined md-only">info</i>
+                         <i class="icon f7-icons size-20">info_circle</i>
                          기본정보
                        </div>
                        <span class="element-detail">
@@ -55,8 +53,7 @@ export function createDynamicPopup(elementId) {
 
                   <div class="block">
                     <div class="element-title">
-                      <i class="icon f7-icons if-not-md size-20">lightbulb</i>
-                      <i class="icon material-icons-outlined md-only">lightbulb</i>
+                      <i class="icon f7-icons size-20">lightbulb</i>
                       혜택
                     </div>
                     <span class="element-detail">
@@ -75,8 +72,7 @@ export function createDynamicPopup(elementId) {
                     ''
                   : `<div class="block">
                     <div class="element-title">
-                      <i class="icon f7-icons if-not-md size-20">exclamationmark_bubble</i>
-                      <i class="icon material-icons-outlined md-only">feedback</i>
+                      <i class="icon f7-icons size-20">exclamationmark_bubble</i>
                       참고사항
                     </div>
                     <span class="element-detail">
@@ -89,8 +85,7 @@ export function createDynamicPopup(elementId) {
 
                   <div class="block">
                     <div class="element-title">
-                      <i class="icon f7-icons if-not-md size-20">pencil</i>
-                      <i class="icon material-icons md-only">edit</i>
+                      <i class="icon f7-icons size-20">pencil</i>
                       잘못된 정보가 있나요?
                     </div>
                     <span class="element-detail">
@@ -137,8 +132,7 @@ export function createDynamicPopup(elementId) {
                     <div class="title"></div>
                     <div class="right">
                       <a href="#" class="link popup-close">
-                        <i class="icon f7-icons if-not-md">multiply</i>
-                        <i class="icon material-icons md-only">close</i>
+                        <i class="icon f7-icons">multiply</i>
                       </a>
                     </div>
                   </div>
