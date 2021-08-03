@@ -94,6 +94,13 @@ export function createDynamicPopup(elementId) {
                     </span>
                   </div>
 
+                  <div>
+                    <ins class="kakao_ad_area" style="display:none;"
+                     data-ad-unit    = "DAN-2Ru1Rl0ZnPcVvPyG"
+                     data-ad-width   = "320"
+                     data-ad-height  = "50"></ins>
+                  </div>
+
                 </div>
               </div>
 
