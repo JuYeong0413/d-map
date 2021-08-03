@@ -23,6 +23,7 @@ set :deploy_to, '/home/deploy/d-map'
 # Default value for :linked_files is []
 append :linked_files, "config/database.yml"
 append :linked_files, "config/master.key"
+append :linked_files, "config/env_variables.rb"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system"
@@ -38,3 +39,29 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+set :ssh_options, {
+  forward_agent: true,
+  paranoid: true,
+  keys: "~/.ssh/id_rsa"
+}
+
+# Upload linked_files to EC2 server
+namespace :deploy do
+  namespace :check do
+    before :linked_files, :set_master_key do
+      on roles(:app), in: :sequence, wait: 10 do
+        unless test("[ -f #{shared_path}/config/database.yml ]")
+          upload! 'config/database.yml', "#{shared_path}/config/database.yml"
+        end
+
+        unless test("[ -f #{shared_path}/config/master.key ]")
+          upload! 'config/master.key', "#{shared_path}/config/master.key"
+        end
+
+        unless test("[ -f #{shared_path}/config/env_variables.rb ]")
+          upload! 'config/env_variables.rb', "#{shared_path}/config/env_variables.rb"
+        end
+      end
+    end
+  end
+end

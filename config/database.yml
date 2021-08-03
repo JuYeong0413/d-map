@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: d_map_production
-  username: d_map
+  username: <%= ENV['D_MAP_DATABASE_USERNAME'] %>
   password: <%= ENV['D_MAP_DATABASE_PASSWORD'] %>
