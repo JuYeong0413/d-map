@@ -6,7 +6,7 @@
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
-server '', user: 'deploy', roles: %w{app db web} # TODO: ip address
+server ENV['PRODUCTION_IP'], user: 'deploy', roles: %w{app db web}
 
 
 
