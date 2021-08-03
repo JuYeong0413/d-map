@@ -1,0 +1,2 @@
+ENV['PRODUCTION_IP'] = ''
+ENV['SENTRY_DSN'] = ''

@@ -5,6 +5,8 @@ ruby '2.7.3'
 
 gem 'activeadmin'
 gem 'devise'
+gem "sentry-ruby"
+gem "sentry-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4'
 # Use postgresql as the database for Active Record
