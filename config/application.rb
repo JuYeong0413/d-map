@@ -12,7 +12,6 @@ module DMap
     config.load_defaults 6.1
     config.time_zone = "Seoul"
     config.active_record.default_timezone = :local
-    config.i18n.default_locale = :ko
 
     # Configuration for the application, engines, and railties goes here.
     #

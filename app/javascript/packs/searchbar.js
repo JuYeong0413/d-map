@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Page init');
+  // console.log('Page init');
   // create searchbar
   var searchbar = app.searchbar.create({
     el: '.searchbar',
@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // searchList: '.list-block-search',
     on: {
       enable: function () {
-        console.log('Searchbar enabled.');
+        // console.log('Searchbar enabled.');
       },
       search(sb, query, previousQuery) {
-        console.log(query, previousQuery);
+        // console.log(query, previousQuery);
       }
     }
   });

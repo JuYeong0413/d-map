@@ -53,11 +53,7 @@
       </div>
     </div>
 
-    <%= javascript_pack_tag 'toast' %>
-    <%= javascript_pack_tag 'maps' %>
-    <%= javascript_pack_tag 'elements' %>
-    <%= javascript_pack_tag 'searchbar' %>
-    <%= javascript_pack_tag 'popup' %>
+    <%= javascript_pack_tag 'toast', 'maps', 'elements', 'searchbar', 'popup' %>
 
     <script type="text/javascript">
       // Dom7
@@ -77,7 +73,7 @@
         // ... other parameters
         on: {
           init: function () {
-            console.log('App initialized.');
+            // console.log('App initialized.');
           },
         }
       });
