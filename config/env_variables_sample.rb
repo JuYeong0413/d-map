@@ -1,0 +1,5 @@
+ENV['PRODUCTION_IP'] = ''
+ENV['SENTRY_DSN'] = ''
+ENV['DB_NAME'] = ''
+ENV['DB_USERNAME'] = ''
+ENV['DB_PASSWORD'] = ''
