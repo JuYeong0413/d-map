@@ -121,7 +121,8 @@ def seed_benefits
 
   Benefit.find_or_create_by!(
     element_id: 11,
-    title: '10% 할인'
+    title: '도서 및 제휴매장 핫트랙스에서 판매하는 음반, 문구 등 구입시 10% 할인',
+    detail: '(단, 잡지, 국정교과서, 방통대 교재, 사전 등 일부 품목 제외, 일산점의 경우 중고교 학습교재 제외)'
   )
 
   Benefit.find_or_create_by!(
