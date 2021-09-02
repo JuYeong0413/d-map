@@ -84,7 +84,7 @@ def seed_elements
   )
 
   Element.find_or_create_by!(
-    name: '교보문고(전국, 핫트랙스 포함)'
+    name: '교보문고(광화문점/강남점/일산점)'
   )
 
   Element.find_or_create_by!(
