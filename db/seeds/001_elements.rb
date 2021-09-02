@@ -151,5 +151,13 @@ def seed_elements
     link: 'http://naver.me/Fn2myIKC'
   )
 
+  Element.find_or_create_by!(
+    name: '농축원',
+    location: '서울 중구 동호로24길 19',
+    lat: 37.56002623502656,
+    lng: 127.00515089645774,
+    link: 'http://naver.me/FmgnWeri'
+  )
+
   puts 'Seeding elements done.'
 end

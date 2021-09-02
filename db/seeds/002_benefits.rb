@@ -165,5 +165,10 @@ def seed_benefits
     title: '10% 할인'
   )
 
+  Benefit.find_or_create_by!(
+    element_id: 20,
+    title: '10% 할인'
+  )
+
   puts 'Seeding benefits done.'
 end
