@@ -137,7 +137,8 @@ def seed_benefits
 
   Benefit.find_or_create_by!(
     element_id: 14,
-    title: '평일(월~금) 7,000원, 주말(토,일) 8,000원'
+    title: '주중&주말 3천원 할인 (컴포트관 추가요금 1,000원)',
+    detail: '동반 1인까지 적용'
   )
 
   Benefit.find_or_create_by!(
