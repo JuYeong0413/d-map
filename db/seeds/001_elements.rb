@@ -1,6 +1,7 @@
 def seed_elements
   puts 'Seeding elements...'
 
+  # 1
   Element.find_or_create_by!(
     name: '에빈의 커피이야기',
     location: '서울 중구 퇴계로42길 35',
@@ -10,6 +11,7 @@ def seed_elements
     link: 'http://naver.me/xVm3wJtI'
   )
 
+  # 2
   Element.find_or_create_by!(
     name: '필동반점',
     location: '서울 중구 필동로 15-6',
@@ -18,6 +20,7 @@ def seed_elements
     link: 'http://naver.me/IxwaWfjm'
   )
 
+  # 3
   Element.find_or_create_by!(
     name: '필동삼계탕',
     location: '서울 중구 필동로 14',
@@ -26,6 +29,7 @@ def seed_elements
     link: 'http://naver.me/FKKD6NkC'
   )
 
+  # 4
   Element.find_or_create_by!(
     name: '라화방마라탕 동국대점',
     location: '서울 중구 서애로1길 10',
@@ -34,6 +38,7 @@ def seed_elements
     link: 'http://naver.me/5Onoo93o'
   )
 
+  # 5
   Element.find_or_create_by!(
     name: '잭슨빌피자 동국대점',
     location: '서울 중구 서애로1길 12 3층',
@@ -42,6 +47,7 @@ def seed_elements
     link: 'http://naver.me/GOyAgox8'
   )
 
+  # 6
   Element.find_or_create_by!(
     name: '은화수식당 동국대점',
     location: '서울 중구 필동3가 25-15번지 1층 111호',
@@ -50,6 +56,7 @@ def seed_elements
     link: 'http://naver.me/xxxTc5kk'
   )
 
+  # 7
   Element.find_or_create_by!(
     name: '글라스타안경 동국대점',
     location: '서울 중구 서애로1길 11 헤센스마트 1층 117호',
@@ -58,6 +65,7 @@ def seed_elements
     link: 'http://naver.me/FBwZDRAQ'
   )
 
+  # 8
   Element.find_or_create_by!(
     name: '설빙 충무로점',
     location: '서울 중구 퇴계로 210 2층(충무로역 1번출구)',
@@ -66,6 +74,7 @@ def seed_elements
     link: 'http://naver.me/FIjN6Kub'
   )
 
+  # 9
   Element.find_or_create_by!(
     name: '오매가매',
     location: '서울 중구 퇴계로 188 지하 1층(충무로역 4번 출구 앞 파리바게트 건물)',
@@ -75,6 +84,7 @@ def seed_elements
     link: 'http://naver.me/FuipCZ06'
   )
 
+  # 10
   Element.find_or_create_by!(
     name: '치아바타 몽스',
     location: '서울 중구 퇴계로 199 충무로역 3.4호선',
@@ -83,10 +93,12 @@ def seed_elements
     link: 'http://naver.me/xlQt2CVA'
   )
 
+  # 11
   Element.find_or_create_by!(
     name: '교보문고(광화문점/강남점/일산점)'
   )
 
+  # 12
   Element.find_or_create_by!(
     name: '할리스 충무로역점',
     location: '서울 중구 퇴계로36길 2 (필동 2가, 1층)',
@@ -95,6 +107,7 @@ def seed_elements
     link: 'http://naver.me/FKKxK2Ml'
   )
 
+  # 13
   Element.find_or_create_by!(
     name: '탐앤탐스 동대입구역점',
     location: '서울 중구 동호로 260',
@@ -103,6 +116,7 @@ def seed_elements
     link: 'http://naver.me/FqkP7g7I'
   )
 
+  # 14
   Element.find_or_create_by!(
     name: '메가박스 동대문',
     location: '서울 중구 장충단로 247 굿모닝시티 쇼핑몰',
@@ -111,6 +125,7 @@ def seed_elements
     link: 'http://naver.me/5wf4onvv'
   )
 
+  # 15
   Element.find_or_create_by!(
     name: '대한극장',
     location: '서울 중구 퇴계로 212 대한극장',
@@ -119,6 +134,7 @@ def seed_elements
     link: 'http://naver.me/FbRuhvCj'
   )
 
+  # 16
   Element.find_or_create_by!(
     name: '태극당',
     location: '서울 중구 동호로24길 7',
@@ -127,6 +143,7 @@ def seed_elements
     link: 'http://naver.me/GaLVF8t2'
   )
 
+  # 17
   Element.find_or_create_by!(
     name: '뚜레쥬르 제일제당사옥점',
     location: '서울 중구 동호로 330 씨제이제일제당센터',
@@ -135,6 +152,7 @@ def seed_elements
     link: 'http://naver.me/5NFbTG9O'
   )
 
+  # 18
   Element.find_or_create_by!(
     name: '안경매니져 동국대점',
     location: '서울 중구 필동로 15-11',
@@ -143,6 +161,7 @@ def seed_elements
     link: 'http://naver.me/Gw5FAEsi'
   )
 
+  # 19
   Element.find_or_create_by!(
     name: '5gil7 Bistro',
     location: '서울 중구 필동로5길 7',
@@ -151,6 +170,7 @@ def seed_elements
     link: 'http://naver.me/Fn2myIKC'
   )
 
+  # 20
   Element.find_or_create_by!(
     name: '농축원',
     location: '서울 중구 동호로24길 19',
@@ -158,6 +178,15 @@ def seed_elements
     lng: 127.00515089645774,
     link: 'http://naver.me/FmgnWeri'
   )
+
+  # 21
+  Element.find_or_create_by!(
+      name: '연미식당',
+      location: '서울 중구 퇴계로 36길 36',
+      lat: 37.56031888365182,
+      lng: 126.99519445771486,
+      link: 'http://naver.me/5Gx142QN'
+    )
 
   puts 'Seeding elements done.'
 end

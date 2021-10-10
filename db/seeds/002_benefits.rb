@@ -171,5 +171,15 @@ def seed_benefits
     title: '10% 할인'
   )
 
+  Benefit.find_or_create_by!(
+    element_id: 21,
+    title: '연어초밥 10pc 또는 모둠초밥 12pc 주문 시 10% 할인'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 21,
+    title: '2인 2메뉴 주문 시 음료 서비스'
+  )
+
   puts 'Seeding benefits done.'
 end

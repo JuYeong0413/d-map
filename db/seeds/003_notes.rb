@@ -19,5 +19,14 @@ def seed_notes
     content: '인스타그램 @theomgm 계정에서 매장 정보 확인 가능합니다.'
   )
 
+  Note.find_or_create_by!(
+    element_id: 21,
+    content: '오후 5시 이후 적용'
+  )
+  Note.find_or_create_by!(
+    element_id: 21,
+    content: '초밥 할인과 음료 서비스 중복 불가'
+  )
+
   puts 'Seeding notes done.'
 end
