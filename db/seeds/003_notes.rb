@@ -28,5 +28,14 @@ def seed_notes
     content: '초밥 할인과 음료 서비스 중복 불가'
   )
 
+  Note.find_or_create_by!(
+    element_id: 22,
+    content: '오후 3시 이후 적용'
+  )
+  Note.find_or_create_by!(
+    element_id: 22,
+    content: '적립혜택과 중복 불가'
+  )
+
   puts 'Seeding notes done.'
 end

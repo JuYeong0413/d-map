@@ -181,5 +181,10 @@ def seed_benefits
     title: '2인 2메뉴 주문 시 음료 서비스'
   )
 
+  Benefit.find_or_create_by!(
+    element_id: 22,
+    title: '아이스아메리카노, 복숭아 아이스티 무료 사이즈업'
+  )
+
   puts 'Seeding benefits done.'
 end

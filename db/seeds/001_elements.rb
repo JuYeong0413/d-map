@@ -181,12 +181,21 @@ def seed_elements
 
   # 21
   Element.find_or_create_by!(
-      name: '연미식당',
-      location: '서울 중구 퇴계로 36길 36',
-      lat: 37.56031888365182,
-      lng: 126.99519445771486,
-      link: 'http://naver.me/5Gx142QN'
-    )
+    name: '연미식당',
+    location: '서울 중구 퇴계로 36길 36',
+    lat: 37.56031888365182,
+    lng: 126.99519445771486,
+    link: 'http://naver.me/5Gx142QN'
+  )
+
+  # 22
+  Element.find_or_create_by!(
+    name: '옴뇸뇸커피',
+    location: '서울 중구 필동로 30-1',
+    lat: 37.55897462468768,
+    lng: 126.99601105277974,
+    link: 'http://naver.me/GHEYniYd'
+  )
 
   puts 'Seeding elements done.'
 end
