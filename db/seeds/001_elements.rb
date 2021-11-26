@@ -1,7 +1,7 @@
 def seed_elements
   puts 'Seeding elements...'
 
-  # 1
+  # 1 - Removed
   Element.find_or_create_by!(
     name: '에빈의 커피이야기',
     location: '서울 중구 퇴계로42길 35',
@@ -20,7 +20,7 @@ def seed_elements
     link: 'http://naver.me/IxwaWfjm'
   )
 
-  # 3
+  # 3 - Removed
   Element.find_or_create_by!(
     name: '필동삼계탕',
     location: '서울 중구 필동로 14',
@@ -65,7 +65,7 @@ def seed_elements
     link: 'http://naver.me/FBwZDRAQ'
   )
 
-  # 8
+  # 8 - Removed
   Element.find_or_create_by!(
     name: '설빙 충무로점',
     location: '서울 중구 퇴계로 210 2층(충무로역 1번출구)',
@@ -195,6 +195,92 @@ def seed_elements
     lat: 37.55897462468768,
     lng: 126.99601105277974,
     link: 'http://naver.me/GHEYniYd'
+  )
+
+  # 23
+  Element.find_or_create_by!(
+    name: 'Microsoft Office',
+    link: 'https://www.microsoft.com/ko-kr/education/products/office'
+  )
+
+  # 24
+  Element.find_or_create_by!(
+    name: 'Google Drive'
+  )
+
+  # 25
+  Element.find_or_create_by!(
+    name: 'Windows 10 Edu',
+    link: 'https://onthehub.com/download/free-software/windows-11-education-for-students/'
+  )
+
+  # 26
+  Element.find_or_create_by!(
+    name: 'SKT 0한동',
+    link: 'https://www.younghandong.com/'
+  )
+
+  # 27
+  Element.find_or_create_by!(
+    name: 'DBpia',
+    link: 'https://www.dbpia.co.kr/member/b2bLogin'
+  )
+
+  # 28
+  Element.find_or_create_by!(
+    name: '잡플래닛',
+    link: 'https://www.jobplanet.co.kr/career_center/welcome/cover'
+  )
+
+  # 29
+  Element.find_or_create_by!(
+    name: '코멘토',
+    link: 'https://comento.kr/univ/index/%EB%8F%99%EA%B5%AD%EB%8C%80%ED%95%99%EA%B5%90?univ=TRdGcFKt7puOMiJXU8PeqQ%3D%3D&std_no=XsEDkS2O1Frrplus6pluscyTFKEg%3D%3D&utm_source=affiliate-university&utm_medium=link&utm_campaign=dongguk&utm_term=contents&utm_content=B-option'
+  )
+
+  # 30
+  Element.find_or_create_by!(
+    name: '카피킬러',
+    link: 'https://dongguk.copykiller.com/'
+  )
+
+  # 31
+  Element.find_or_create_by!(
+    name: '학생복지스토어',
+    link: 'https://www.univstore.com/'
+  )
+
+  # 32
+  Element.find_or_create_by!(
+    name: '교육할인스토어',
+    link: 'https://m.ygoon.com/mall/main'
+  )
+
+  # 33
+  Element.find_or_create_by!(
+    name: '동국대학교 일산병원',
+    location: '경기 고양시 일산동구 동국로 27 동국대학교 일산병원',
+    lat: 37.67656750338116,
+    lng: 126.80640872710062,
+    link: 'http://naver.me/GslU09Sh'
+  )
+
+  # 34
+  Element.find_or_create_by!(
+    name: '텝스(TEPS) 대학연합평가',
+    link: 'https://group.teps.or.kr/'
+  )
+
+  # 35
+  Element.find_or_create_by!(
+    name: '오픽(OPIc) 대학연합평가',
+    link: 'https://univ.opic.or.kr/'
+  )
+
+  # 36
+  Element.find_or_create_by!(
+    name: '지텔프(G-TELP)',
+    link: 'https://www.g-telp.co.kr:335/mobile/guide/guide1_2.asp'
   )
 
   puts 'Seeding elements done.'

@@ -33,7 +33,18 @@ export function createDynamicPopup(elementId) {
                 </div>
                 <div class="page-content">
                   ${response.location == null ?
-                    ''
+                    `${response.link == null ?
+                       ''
+                     : `<div class="block">
+                          <div class="element-title">
+                            <i class="icon f7-icons size-20">info_circle</i>
+                              기본정보
+                          </div>
+                          <span class="element-detail">
+                            <a class="link external" href="${response.link}" target="_blank">홈페이지</a>
+                          <span>
+                        </div>`
+                    }`
                   : `<div id="element-map" class="element-map"></div>
                      <div class="block">
                        <div class="element-title">

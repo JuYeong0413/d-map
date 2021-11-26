@@ -16,7 +16,7 @@ def seed_benefits
   )
   Benefit.find_or_create_by!(
     element_id: 2,
-    title: '4인이상 주문 시 군만두 서비스'
+    title: '전 메뉴 500원 할인(식사메뉴 포함) 또는 4인이상 주문 시 군만두 서비스'
   )
 
   Benefit.find_or_create_by!(
@@ -36,11 +36,7 @@ def seed_benefits
 
   Benefit.find_or_create_by!(
     element_id: 5,
-    title: '테이블 당 500mL 음료 1개 서비스'
-  )
-  Benefit.find_or_create_by!(
-    element_id: 5,
-    title: '에이드 2,000원 또는 500mL 음료 주문시 1.25L로 사이즈업'
+    title: '테이블 당 뚱캔 1개(350mL) 서비스'
   )
 
   Benefit.find_or_create_by!(
@@ -51,11 +47,6 @@ def seed_benefits
   Benefit.find_or_create_by!(
     element_id: 7,
     title: '기존 동국대생 할인 적용 후 최종 결제금액에서 추가 10% 즉시할인 적용'
-  )
-  Benefit.find_or_create_by!(
-    element_id: 7,
-    title: '친구소개 이벤트(소개해준 친구, 소개받은 친구)',
-    detail: '안경 구매 시 아이스 아메리카노 커피쿠폰 제공 (커피온: 동국대후문 위치)'
   )
   Benefit.find_or_create_by!(
     element_id: 7,
@@ -143,7 +134,15 @@ def seed_benefits
 
   Benefit.find_or_create_by!(
     element_id: 15,
-    title: '영화 관람 7,000원'
+    title: '평일 월~목(조조~10:59) 영화관람 7,000원'
+  )
+  Benefit.find_or_create_by!(
+    element_id: 15,
+    title: '평일 월~목(11:00~) 영화관람 8,000원'
+  )
+  Benefit.find_or_create_by!(
+    element_id: 15,
+    title: '주말 금~일, 공휴일(조조&11:00~) 영화관람 8,000원'
   )
 
   Benefit.find_or_create_by!(
@@ -184,6 +183,84 @@ def seed_benefits
   Benefit.find_or_create_by!(
     element_id: 22,
     title: '아이스아메리카노, 복숭아 아이스티 무료 사이즈업'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 23,
+    title: 'Office 365 무료 이용 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 24,
+    title: '구글연동메일(@dgu.ac.kr)이용 시 용량 무제한으로 메일, 첨부파일 및 구글 드라이브 사용 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 25,
+    title: '무료 다운로드 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 26,
+    title: 'FLO / waave 할인'
+  )
+  Benefit.find_or_create_by!(
+    element_id: 26,
+    title: '캠퍼스존으로 지정된 학교 주소지 내에서 사용 가능한 캠퍼스 데이터 제공'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 27,
+    title: '동국대학교의 구독자료 무료 이용 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 28,
+    title: '학교 웹메일 계정으로 잡플래닛 가입 시 다양한 자료 열람 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 29,
+    title: '현직자 멘토링 사례 무제한 열람권 제공'
+  )
+  Benefit.find_or_create_by!(
+    element_id: 29,
+    title: '현직자 멘토링 요청 1인당 쿠폰 30개 제공'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 30,
+    title: '업로드 문서 수 제한없이 검사 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 31,
+    title: '저렴한 가격으로 상품 구입 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 32,
+    title: '교육할인가로 상품 구입 가능'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 33,
+    title: '10% 할인'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 34,
+    title: '연 1회 응시료 할인'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 35,
+    title: '연 1회 응시료 할인'
+  )
+
+  Benefit.find_or_create_by!(
+    element_id: 36,
+    title: '정기시험 G-TELP Level 2 할인'
   )
 
   puts 'Seeding benefits done.'

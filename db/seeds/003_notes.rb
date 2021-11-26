@@ -2,6 +2,11 @@ def seed_notes
   puts 'Seeding notes...'
 
   Note.find_or_create_by!(
+    element_id: 4,
+    content: '가게에서 식사를 할 때에만 제공됨'
+  )
+
+  Note.find_or_create_by!(
     element_id: 5,
     content: '포스기로 메뉴 주문 후, 카운터에서 학생증을 제시하시면 제휴 혜택을 받으실 수 있습니다.'
   )
