@@ -52,6 +52,10 @@ export function createDynamicPopup(elementId) {
                          기본정보
                        </div>
                        <span class="element-detail">
+                         ${response.promotion_type == null ?
+                           ''
+                           : `-&nbsp;${response.promotion_type}<br>`
+                         }
                          -&nbsp;주소:&nbsp;${response.location}<br>
                          ${response.instagram == null ?
                            ''

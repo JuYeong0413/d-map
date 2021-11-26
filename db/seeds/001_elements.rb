@@ -17,7 +17,8 @@ def seed_elements
     location: '서울 중구 필동로 15-6',
     lat: 37.560041330294254,
     lng: 126.99649893484025,
-    link: 'http://naver.me/IxwaWfjm'
+    link: 'http://naver.me/IxwaWfjm',
+    promotion_type: 1
   )
 
   # 3 - Removed
@@ -35,7 +36,8 @@ def seed_elements
     location: '서울 중구 서애로1길 10',
     lat: 37.5609499212201,
     lng: 126.99846407953457,
-    link: 'http://naver.me/5Onoo93o'
+    link: 'http://naver.me/5Onoo93o',
+    promotion_type: 1
   )
 
   # 5
@@ -44,7 +46,8 @@ def seed_elements
     location: '서울 중구 서애로1길 12 3층',
     lat: 37.560919869785856,
     lng: 126.99873495131916,
-    link: 'http://naver.me/GOyAgox8'
+    link: 'http://naver.me/GOyAgox8',
+    promotion_type: 1
   )
 
   # 6
@@ -53,7 +56,8 @@ def seed_elements
     location: '서울 중구 필동3가 25-15번지 1층 111호',
     lat: 37.56119543679776,
     lng: 126.9985460857979,
-    link: 'http://naver.me/xxxTc5kk'
+    link: 'http://naver.me/xxxTc5kk',
+    promotion_type: 1
   )
 
   # 7
@@ -62,7 +66,8 @@ def seed_elements
     location: '서울 중구 서애로1길 11 헤센스마트 1층 117호',
     lat: 37.56116354387691,
     lng: 126.99863728090322,
-    link: 'http://naver.me/FBwZDRAQ'
+    link: 'http://naver.me/FBwZDRAQ',
+    promotion_type: 1
   )
 
   # 8 - Removed
@@ -81,7 +86,8 @@ def seed_elements
     lat: 37.560868962779196,
     lng: 126.99252649650428,
     instagram: 'theomgm',
-    link: 'http://naver.me/FuipCZ06'
+    link: 'http://naver.me/FuipCZ06',
+    promotion_type: 1
   )
 
   # 10
@@ -90,7 +96,8 @@ def seed_elements
     location: '서울 중구 퇴계로 199 충무로역 3.4호선',
     lat: 37.56070208906656,
     lng: 126.99451414935032,
-    link: 'http://naver.me/xlQt2CVA'
+    link: 'http://naver.me/xlQt2CVA',
+    promotion_type: 1
   )
 
   # 11
@@ -185,7 +192,8 @@ def seed_elements
     location: '서울 중구 퇴계로 36길 36',
     lat: 37.56031888365182,
     lng: 126.99519445771486,
-    link: 'http://naver.me/5Gx142QN'
+    link: 'http://naver.me/5Gx142QN',
+    promotion_type: 1
   )
 
   # 22
@@ -194,7 +202,8 @@ def seed_elements
     location: '서울 중구 필동로 30-1',
     lat: 37.55897462468768,
     lng: 126.99601105277974,
-    link: 'http://naver.me/GHEYniYd'
+    link: 'http://naver.me/GHEYniYd',
+    promotion_type: 1
   )
 
   # 23

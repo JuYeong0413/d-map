@@ -28,6 +28,7 @@ class ElementsController < ApplicationController
       lng: @element.lng,
       instagram: @element.instagram,
       link: @element.link,
+      promotion_type: @element.promotion_type_name,
       benefits: @benefits,
       notes: @notes
     }
