@@ -7,7 +7,7 @@ class Element < ApplicationRecord
     dgu_3meals: 2
   }
   PROMOTION_TYPE_NAMES = {
-    d_membership: '디멤버십 제휴 매장',
+    d_membership: '총학생회 디멤버십 제휴 매장 (~2021/12/31까지)',
     dgu_3meals: '동국세끼 프로모션'
   }
 
