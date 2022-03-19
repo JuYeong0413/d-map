@@ -2,7 +2,7 @@
 ![d-map-thumbnail](https://user-images.githubusercontent.com/33684401/131970408-906193a7-c4dd-4aac-9953-e709205dc30c.jpeg)
 
 ### 동국, 그대를 위한 할인혜택
-동국총학 제휴 매장 & 동국대학교 재학생이 이용할 수 있는 각종 혜택 모아보기 👉🏻 https://d-map.site  
+동국총학 제휴 매장 & 동국대학교 재학생이 이용할 수 있는 각종 혜택 모아보기
 
 ## Screenshots
 <p align="center">
